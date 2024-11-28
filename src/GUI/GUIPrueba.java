@@ -67,14 +67,14 @@ public class GUIPrueba {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                listaSimple.mostrar(table1);
+                listaSimple.mostrar(table1, 0, true);
             }
         });
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                listaSimple.mostrarBusqueda(table2, listaSimple.buscarLineal(Integer.parseInt(codigoBuscar.getText())));
+                listaSimple.mostrar(table2, listaSimple.buscarLineal(Integer.parseInt(codigoBuscar.getText())), false);
             }
         });
         filtrarButton.addActionListener(new ActionListener() {
@@ -82,7 +82,7 @@ public class GUIPrueba {
             public void actionPerformed(ActionEvent e) {
 
                 listaFiltrada = listaSimple.filtrar(comboBox1.getSelectedItem().toString(), false);
-                listaFiltrada.mostrar(table3);
+                listaFiltrada.mostrar(table3, 0, true);
             }
         });
         ordenarButton.addActionListener(new ActionListener() {
@@ -90,7 +90,7 @@ public class GUIPrueba {
             public void actionPerformed(ActionEvent e) {
 
                 listaFiltrada.ordenar();
-                listaFiltrada.mostrar(table3);
+                listaFiltrada.mostrar(table3, 0, true);
             }
         });
         contarButton.addActionListener(new ActionListener() {
