@@ -46,12 +46,12 @@ public class GUIPrueba {
 
                 if(listaSimple.buscarLineal(Integer.parseInt(codigo.getText())) != -1) {
 
-                    JOptionPane.showMessageDialog(null, "Ya existe ese pana");
+                    JOptionPane.showMessageDialog(null, "Ya existe un Avenger con este codigo");
                 }else{
                     //int codigo, String nombre, String poderEspecial, String nivelHabilidad, int misionActiva
                     avenger = new YoungAvenger(Integer.parseInt(codigo.getText()), nombre.getText(), poderEspecial.getSelectedItem().toString(), Integer.parseInt(nivelHabilidad.getSelectedItem().toString()), misionActiva.getSelectedItem().toString());
                     listaSimple.agregarAvenger(avenger);
-                    JOptionPane.showMessageDialog(null, "Guerrero agregado con exito");
+                    JOptionPane.showMessageDialog(null, "Avenger agregado con exito");
                 }
             }
         });
