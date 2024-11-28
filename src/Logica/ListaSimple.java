@@ -181,4 +181,37 @@ public class ListaSimple {
 
         return lista;
     }
+
+    //True = realizar lista con coincidencias
+    //False = generar lista con los objetos diferentes al filtro
+    public ListaSimple filtrar(String poderEspecial, boolean flag){
+
+
+        Nodo aux = this.inicio;
+        ListaSimple lista = new ListaSimple();
+
+        if(flag){
+
+            while(aux != null){
+
+                if(poderEspecial.equals(aux.getAvenger().getPoderEspecial())){
+
+                    lista.agregarAvenger(aux.getAvenger());
+                }
+                aux = aux.getNext();
+            }
+        }else{
+
+            while(aux != null){
+
+                if(!poderEspecial.equals(aux.getAvenger().getPoderEspecial())){
+
+                    lista.agregarAvenger(aux.getAvenger());
+                }
+                aux = aux.getNext();
+            }
+        }
+
+        return lista;
+    }
 }

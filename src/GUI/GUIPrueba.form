@@ -75,7 +75,7 @@
                 </constraints>
                 <properties>
                   <model>
-                    <item value="Telestransportacion"/>
+                    <item value="Teletransportacion"/>
                     <item value="Manipulacion de energia"/>
                     <item value="Magia"/>
                     <item value="Super fuerza"/>
@@ -237,7 +237,7 @@
                 </constraints>
                 <properties>
                   <model>
-                    <item value="Telestransportacion"/>
+                    <item value="Teleransportacion"/>
                     <item value="Manipulacion de energia"/>
                     <item value="Magia"/>
                     <item value="Super fuerza"/>

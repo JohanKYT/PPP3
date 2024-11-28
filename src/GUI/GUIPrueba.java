@@ -81,7 +81,7 @@ public class GUIPrueba {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                listaFiltrada = listaSimple.filtrarLista(comboBox1.getSelectedItem().toString());
+                listaFiltrada = listaSimple.filtrar(comboBox1.getSelectedItem().toString(), false);
                 listaFiltrada.mostrar(table3);
             }
         });
@@ -97,12 +97,11 @@ public class GUIPrueba {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-
-                listaTele = listaSimple.filtrarLista("Teletrasportacion");
-                listaEnergia = listaSimple.filtrarLista("Manipulacion de energia");
-                listaMagia = listaSimple.filtrarLista("Magia");
-                listaSupFuer = listaSimple.filtrarLista("Super Fuerza");
-                listaArqueria = listaSimple.filtrarLista("Arqueria");
+                listaTele = listaSimple.filtrar("Teletransportacion", true);
+                listaEnergia = listaSimple.filtrar("Manipulacion de energia", true);
+                listaMagia = listaSimple.filtrar("Magia", true);
+                listaSupFuer = listaSimple.filtrar("Super fuerza", true);
+                listaArqueria = listaSimple.filtrar("Arqueria", true);
 
                 int conteoTele = listaTele.contarElementos(listaTele, 0);
                 int conteoEner = listaEnergia.contarElementos(listaEnergia, 0);
@@ -110,7 +109,7 @@ public class GUIPrueba {
                 int conteoSupFuer = listaSupFuer.contarElementos(listaSupFuer, 0);
                 int conteoArqueria =listaArqueria.contarElementos(listaArqueria, 0);
 
-                textArea1.setText("Misiones de Teletrasportacion: " + Integer.toString(conteoTele) + "\n" +
+                textArea1.setText("Misiones de Teletransportacion: " + Integer.toString(conteoTele) + "\n" +
                         "Misiones de Manipulacion de energia: " + Integer.toString(conteoEner) + "\n" +
                         "Misiones de Magia: " + Integer.toString(conteoMagia) + "\n" +
                         "Misiones de Super Fuerza: " + Integer.toString(conteoSupFuer) + "\n" +
